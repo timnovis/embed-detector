@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description":
     "Detect YouTube, Vimeo & SoundCloud links and turn them into URLs for iFrames",
-  "main": "index.js",
+  "main": "dist/EmbedDetector.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev"
