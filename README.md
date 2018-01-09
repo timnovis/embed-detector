@@ -9,5 +9,5 @@ npm install embed-detector
 ```
 import EmbedDetector from 'embed-detector';
 
-let iFrameUrl = EmbedDetector.detect('https://www.youtube.com/watch?v=Cm_xAyzGeoA');
+let iFrameUrl = EmbedDetector('https://www.youtube.com/watch?v=Cm_xAyzGeoA');
 ```

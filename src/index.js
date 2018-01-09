@@ -1,6 +1,6 @@
 export default class EmbedDetector {
   static get pattern() {
-    return /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([\w\-]{10,12})(?:&feature)?(?:[\w\-]{0})?|https?:\/\/(soundcloud\.com|snd\.sc)\/(.*)|(http|https)?:\/\/(www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|)(\d+)(?:|\/\?)/;
+    return /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([\w\-]{10,12})(?:&feature)?(?:[\w\-]{0})?|(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?|(http|https)?:\/\/(www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|)(\d+)(?:|\/\?)/;
   }
   static get sources() {
     return [
@@ -25,7 +25,7 @@ export default class EmbedDetector {
   }
   static detect(string) {
     if (string && string.length > 0 && EmbedDetector.pattern.test(string)) {
-      let url = '';
+      let url = null;
       EmbedDetector.sources.forEach(source => {
         if (string.indexOf(source.type) > -1) {
           url = source.url.replace(

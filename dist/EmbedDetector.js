@@ -97,7 +97,7 @@ var EmbedDetector = function () {
     key: 'detect',
     value: function detect(string) {
       if (string && string.length > 0 && EmbedDetector.pattern.test(string)) {
-        var url = '';
+        var url = null;
         EmbedDetector.sources.forEach(function (source) {
           if (string.indexOf(source.type) > -1) {
             url = source.url.replace('$1', string.match(EmbedDetector.pattern)[source.matchIndex]);
@@ -109,7 +109,7 @@ var EmbedDetector = function () {
   }, {
     key: 'pattern',
     get: function get() {
-      return (/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([\w\-]{10,12})(?:&feature)?(?:[\w\-]{0})?|https?:\/\/(soundcloud\.com|snd\.sc)\/(.*)|(http|https)?:\/\/(www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|)(\d+)(?:|\/\?)/
+      return (/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([\w\-]{10,12})(?:&feature)?(?:[\w\-]{0})?|(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?|(http|https)?:\/\/(www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|)(\d+)(?:|\/\?)/
       );
     }
   }, {
