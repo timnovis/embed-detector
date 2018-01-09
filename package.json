@@ -1,0 +1,18 @@
+{
+  "name": "embed-detector",
+  "version": "0.1.0",
+  "description":
+    "Detect YouTube, Vimeo & SoundCloud links and turn them into URLs for iFrames",
+  "main": "index.js",
+  "keywords": ["embed", "detector"],
+  "author": "Tim Novis <tim.novis@me.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timnovis/embed-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timnovis/embed-detector/issues"
+  },
+  "homepage": "https://github.com/timnovis/embed-detector#readme"
+}
