@@ -1,15 +1,27 @@
 {
   "name": "embed-detector",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description":
     "Detect YouTube, Vimeo & SoundCloud links and turn them into URLs for iFrames",
   "main": "index.js",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev"
+  },
   "keywords": ["embed", "detector"],
   "author": "Tim Novis <tim.novis@me.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/timnovis/embed-detector.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
   },
   "bugs": {
     "url": "https://github.com/timnovis/embed-detector/issues"
