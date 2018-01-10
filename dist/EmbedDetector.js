@@ -129,7 +129,6 @@ var EmbedDetector = function () {
         var url = null;
         EmbedDetector.sources.forEach(function (source) {
           if (source.pattern.test(string) && string.indexOf(source.type) > -1) {
-            console.log(string.match(source.pattern));
             url = source.url.replace('$1', string.match(source.pattern)[source.matchIndex]);
           }
         });
