@@ -53,7 +53,6 @@ export default class EmbedDetector {
       let url = null;
       EmbedDetector.sources.forEach(source => {
         if (source.pattern.test(string) && string.indexOf(source.type) > -1) {
-          console.log(string.match(source.pattern));
           url = source.url.replace(
             '$1',
             string.match(source.pattern)[source.matchIndex],
