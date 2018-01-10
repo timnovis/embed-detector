@@ -1,6 +1,6 @@
 {
   "name": "embed-detector",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description":
     "Detect YouTube, Vimeo & SoundCloud links and turn them into URLs for iFrames",
   "main": "dist/EmbedDetector.js",
