@@ -141,7 +141,7 @@ var EmbedDetector = function () {
       return [{
         type: 'youtube',
         url: 'http://www.youtube.com/embed/$1',
-        pattern: /^(?:https?:\/\/)?(?:i\.|www\.|img\.)?(?:youtu\.be\/|youtube\.com\/|ytimg\.com\/)(?:embed\/|v\/|vi\/|vi_webp\/|watch\?v=|watch\?.+&v=)((\w|-){11})(?:\S+)?$/,
+        pattern: /(?:https?:\/\/)?(?:i\.|www\.|img\.)?(?:youtu\.be\/|youtube\.com\/|ytimg\.com\/)(?:embed\/|v\/|vi\/|vi_webp\/|watch\?v=|watch\?.+&v=)((\w|-){11})(?:\S+)?/,
         matchIndex: 1
       }, {
         type: 'vimeo',
